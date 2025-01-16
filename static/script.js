@@ -10,7 +10,7 @@ function sendRequest(text) {
         'content': text
     });
     formData.append('messages', JSON.stringify(messages));
-
+    const replyingMessage = appendMessage(BOT_NAME, BOT_IMG, "left", "Replying...");
     fetch('/tts', {
         method: 'POST',
         body: formData
@@ -20,7 +20,7 @@ function sendRequest(text) {
         .then(response => {
             messages = (response.messages);
             let message = messages[messages.length - 1];
-            appendMessage(BOT_NAME, BOT_IMG, "left", message.content);
+            updateMessage(replyingMessage, message.content);
             fetchAudio(message.content);
         });
 }
@@ -88,15 +88,21 @@ function appendMessage(name, img, side, text) {
                         <div class="msg-info-time">${formatDate(new Date())}</div>
                         </div>
             
-                        <div class="msg-text">${text}</div>
+                        <div class="msg-text"></div>
                     </div>
                     </div>
                 `;
 
     msgerChat.insertAdjacentHTML("beforeend", msgHTML);
     msgerChat.scrollTop += 500;
+    const msgTextElement = msgerChat.querySelector(".msg:last-child .msg-text");
+    typeTextAnimation(msgTextElement, text);
+    return msgTextElement;
 }
-
+function updateMessage(element, newText, speed = 50) {
+    element.textContent = ""; // Xóa nội dung cũ
+    typeTextAnimation(element, newText, speed); // Hiển thị nội dung mới với hiệu ứng gõ chữ
+}
 function appendAudioMessage(name, img, side, url) {
     //   Simple solution for small apps
     const msgHTML = `
@@ -127,7 +133,19 @@ function botResponse(message) {
     //     appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
     // }, delay);
 }
+function typeTextAnimation(element, text, speed = 35) {
+    let index = 0;
 
+    function typeChar() {
+        if (index < text.length) {
+            element.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeChar, speed);
+        }
+    }
+
+    typeChar();
+}
 // Utils
 function get(selector, root = document) {
     return root.querySelector(selector);

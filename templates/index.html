@@ -28,7 +28,8 @@
         </header>
         <main class="msger-chat">
             <div class="msg left-msg">
-                <div class="msg-img" style="background-image: url('https://i.pinimg.com/736x/44/dd/53/44dd5326d6b50ad621838367a1c79f7c.jpg')">
+                <div class="msg-img"
+                    style="background-image: url('https://i.pinimg.com/736x/44/dd/53/44dd5326d6b50ad621838367a1c79f7c.jpg')">
                 </div>
                 <div class="msg-bubble">
                     <div class="msg-info">
@@ -46,32 +47,25 @@
                 <img src="/static/img/arrow.svg" alt="">
             </button>
         </form>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const input = document.querySelector(".msger-input");
+                const sendButton = document.querySelector(".msger-send-btn");
+
+                input.addEventListener("input", function () {
+                    if (input.value.trim() !== "") {
+                        sendButton.classList.add("enabled");
+                        sendButton.removeAttribute("disabled");
+                    } else {
+                        sendButton.classList.remove("enabled");
+                        sendButton.setAttribute("disabled", "true");
+                    }
+                });
+            });
 
 
-        <footer style="display: flex;justify-content: space-evenly;height: 30px;margin-top: 20px;" hidden>
+        </script>
 
-            <!-- Twitter -->
-            <a href="https://twitter.com/adarshGupta_7">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <!-- <i class="fab fa-instagram"></i> -->
-
-            <a href="https://www.linkedin.com/in/adarsh-gupta-1161a1197/">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-
-            <!-- <i class="fab fa-youtube"></i> -->
-
-            <!-- <i class="fab fa-github"></i> -->
-            <a href="https://medium.com/@TheAdarshGupta" style="color:black">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-medium"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z" />
-                </svg>
-            </a>
-
-        </footer>
 
     </section>
 

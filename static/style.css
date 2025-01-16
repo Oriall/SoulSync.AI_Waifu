@@ -189,10 +189,13 @@ body {
 }
 
 
-.msger-send-btn.active {
-    background: #D6BCFA;
-    /* Active background when text is present */
+.msger-send-btn.enabled {
+    background: #D6BCFA; /* Background when enabled */
     cursor: pointer;
+}
+
+.msger-send-btn.enabled:hover {
+    background: #bba0fb; /* Background when enabled and hovered */
 }
 input:focus{
     outline: none;
@@ -200,8 +203,4 @@ input:focus{
 
 input::placeholder{
     color: #626369;
-}
-.msger-send-btn.active:hover {
-    background: #6B46C1;
-    /* Hover state when text is present */
 }
