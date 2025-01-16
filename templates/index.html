@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Your AI Girlfriend</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" type="image/x-icon" href="/static/img/love-removebg-preview.png">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+
+
+</head>
+
+<body>
+    <section class="msger">
+        <header class="msger-header">
+            <div class="msger-header-title">
+                <i class="fas fa-comment-alt"></i> Chat With Rachel
+            </div>
+            <div class="msger-header-options">
+                <span><i class="fas fa-cog"></i></span>
+            </div>
+        </header>
+        <main class="msger-chat">
+            <div class="msg left-msg">
+                <div class="msg-img" style="background-image: url('https://i.pinimg.com/736x/44/dd/53/44dd5326d6b50ad621838367a1c79f7c.jpg')">
+                </div>
+                <div class="msg-bubble">
+                    <div class="msg-info">
+                        <div class="msg-info-name">Rachel</div>
+                    </div>
+                    <div class="msg-text">
+                        Hi, I am Rachel, your AI girlfriend! Go ahead and send me a something. 😘
+                    </div>
+                </div>
+            </div>
+        </main>
+        <form class="msger-inputarea">
+            <input type="text" class="msger-input" placeholder="Enter to send chat. Have fun!!">
+            <button type="submit" class="msger-send-btn">
+                <img src="/static/img/arrow.svg" alt="">
+            </button>
+        </form>
+
+
+        <footer style="display: flex;justify-content: space-evenly;height: 30px;margin-top: 20px;" hidden>
+
+            <!-- Twitter -->
+            <a href="https://twitter.com/adarshGupta_7">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <!-- <i class="fab fa-instagram"></i> -->
+
+            <a href="https://www.linkedin.com/in/adarsh-gupta-1161a1197/">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <!-- <i class="fab fa-youtube"></i> -->
+
+            <!-- <i class="fab fa-github"></i> -->
+            <a href="https://medium.com/@TheAdarshGupta" style="color:black">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-medium"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z" />
+                </svg>
+            </a>
+
+        </footer>
+
+    </section>
+
+    <script src="/static/script.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAM24mmLk94tDdYQGJ7NVFox6rLe74r3As",
+            authDomain: "ai-gf-97920.firebaseapp.com",
+            projectId: "ai-gf-97920",
+            storageBucket: "ai-gf-97920.appspot.com",
+            messagingSenderId: "1016349654049",
+            appId: "1:1016349654049:web:f0cf07c8dca3047d4b7760",
+            measurementId: "G-SBN3HGTYEW"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <!-- Facebook -->
+
+</body>
+
+</html>
