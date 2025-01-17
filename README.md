@@ -1,4 +1,4 @@
-# Rachel AI Waifu (VKT)
+# SoulSync - Hearts and Technology: AI Waifu (VKT)
 
 > ### Build your own GirlFriend bot using Gemini
 
