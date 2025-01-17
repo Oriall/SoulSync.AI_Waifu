@@ -2,9 +2,9 @@
 <html>
 
 <head>
-    <title>Your AI Girlfriend</title>
+    <title>SoulSync - Hearts and Technology</title>
     <link rel="stylesheet" href="/static/style.css">
-    <link rel="icon" type="image/x-icon" href="/static/img/love-removebg-preview.png">
+    <link rel="icon" type="image/x-icon" href="/static/img/moji.png">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
@@ -17,13 +17,22 @@
 </head>
 
 <body>
+    <div class="header_new">
+        <div class="box1">
+            <div class="back">Back</div>
+            <div class="model_box">Using Model</div>
+        </div>
+        <div class="box2">
+            Chat with Rachel
+        </div>
+    </div>
     <section class="msger">
         <header class="msger-header">
             <div class="msger-header-title">
-                <i class="fas fa-comment-alt"></i> Chat With Rachel
+
             </div>
             <div class="msger-header-options">
-                <span><i class="fas fa-cog"></i></span>
+
             </div>
         </header>
         <main class="msger-chat">
@@ -41,12 +50,6 @@
                 </div>
             </div>
         </main>
-        <form class="msger-inputarea">
-            <input type="text" class="msger-input" placeholder="Enter to send chat. Have fun!!">
-            <button type="submit" class="msger-send-btn">
-                <img src="/static/img/arrow.svg" alt="">
-            </button>
-        </form>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const input = document.querySelector(".msger-input");
@@ -68,6 +71,26 @@
 
 
     </section>
+    <form class="msger-inputarea">
+        <textarea class="msger-input" placeholder="Enter to send chat. Shift + Enter for linebreak
+Alt + Enter for suggestion (20 chars minimum)" rows="1"></textarea>
+        <button type="submit" class="msger-send-btn">
+            <img src="/static/img/arrow.svg" alt="">
+        </button>
+    </form>
+    <script>
+        const textarea = document.querySelector('.msger-input');
+        const sendButton = document.querySelector('.msger-send-btn');
+
+        // Lắng nghe sự kiện phím trên textarea
+        textarea.addEventListener('keydown', function (event) {
+            // Nếu nhấn Enter (keyCode 13) mà không giữ phím Shift
+            if (event.key === 'Enter' && !event.shiftKey) {
+                event.preventDefault(); // Ngăn xuống dòng
+                sendButton.click(); // Gọi hành động click vào nút gửi
+            }
+        });
+    </script>
 
     <script src="/static/script.js"></script>
     <script type="module">

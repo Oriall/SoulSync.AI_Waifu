@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Style+Script&display=swap');
 
 .btn {
     display: inline-block;
@@ -38,12 +39,15 @@ html {
 }
 
 body {
+    overflow: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    height: 100% ;
     background-color: #313339 !important;
     font-family: Helvetica, sans-serif;
+}
+body::-webkit-scrollbar{
+    display: none;
 }
 
 .msger {
@@ -53,7 +57,7 @@ body {
     width: 100%;
     max-width: 867px;
     margin: 25px 10px;
-    height: calc(100% - 50px);
+    height:100%;
 }
 
 .msger-header {
@@ -67,6 +71,8 @@ body {
     flex: 1;
     overflow-y: auto;
     padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 100px;
 }
 
 .msger-chat::-webkit-scrollbar {
@@ -150,27 +156,40 @@ body {
 }
 
 .msger-inputarea {
+    bottom: 25px;
+    position: fixed;
+    width: 672px;
+    height: 81px;
     display: flex;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
     border: 1px solid #6B46C1;
     background: transparent
 }
 
 .msger-inputarea * {
-    padding: 10px;
+    padding:  3px 6px;
     border: none;
     border-radius: 3px;
     font-size: 1em;
 }
 
 .msger-input {
+    display: flex;
+    outline: none;
+    resize: none;
     flex: 1;
     background: transparent;
     backdrop-filter: blur(10px);
     color: rgba(255, 255, 255, 0.811);
 }
-
+.msger-input::-webkit-scrollbar{
+    width: 1px;
+    border-radius: 50%;
+    background-color: #746a879e;
+    display: none;
+}
 .msger-send-btn {
     margin-left: 10px;
     display: flex;
@@ -197,10 +216,66 @@ body {
 .msger-send-btn.enabled:hover {
     background: #bba0fb; /* Background when enabled and hovered */
 }
-input:focus{
+.msger-input:focus{
     outline: none;
 }
 
-input::placeholder{
+.msger-input::placeholder{
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     color: #626369;
+    
+}
+.audio_btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.header_new{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 72px;
+    background: rgba(49, 51, 57, 0.73);
+    z-index: 3;
+    backdrop-filter: blur(10px);
+    box-shadow:  0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.box1{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #FFFFFF;
+}
+.model_box
+{
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+    color: #DFDBEA;
+    font-weight: 500;
+    padding: 1px 9px;
+    background-color: #604B97;
+    border-radius: 5px;
+    
+}
+.box2{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-family: 'Montserrat';
 }
