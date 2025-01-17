@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Loa chính -->
+  <path d="M20 24h8l12-8v32l-12-8h-8z" fill="#FFFFFF"/>
+  <!-- Sóng âm thanh -->
+  <path d="M38 22c4 2 4 8 0 10m6-14c8 4 8 14 0 18m6-22c12 6 12 22 0 28" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+</svg>

@@ -114,7 +114,8 @@ function appendAudioMessage(name, img, side, url) {
                         <div class="msg-info-name">${name}</div>
                         <div class="msg-info-time">${formatDate(new Date())}</div>
                         </div>
-                        <audio src="${url}" controls="" autoplay></audio>
+                        <div class="play-button" id="playButton"><img src="/static/img/sound.svg" alt=""></div>
+                        <audio src="${url}" controls="" autoplay hidden></audio>
                     </div>
                     </div>
                 `;
