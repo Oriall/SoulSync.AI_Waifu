@@ -7,8 +7,12 @@ from app import AIGirlfriend
 app = Flask(__name__)
 
 @app.route("/")
+@app.route("/home")
 def index():
     return render_template('index.html')
+@app.route("/voice_page")
+def voice_page():
+    return render_template('voice_page.html')
 
 @app.route("/tts", methods=["POST"])
 def tts():

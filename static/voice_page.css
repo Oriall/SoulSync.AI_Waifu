@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.bg_load {
+    position: absolute;
+    background-color: #201E2F;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+@-webkit-keyframes ZoomOut {
+    from {
+
+
+
+        opacity: 1;
+    }
+
+    to {
+
+        opacity: 0;
+    }
+
+}
+
+.animation-status7 {
+    animation: ZoomOut 0.29s ease-out forwards;
+}
+
+/*----------LOader------------*/
+/* From Uiverse.io by alexruix */
+.loader {
+    width: 80px;
+    height: 50px;
+    position: relative;
+}
+
+.loader-text {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    color: #C8B6FF;
+    animation: text_713 3.5s ease both infinite;
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+
+.load {
+    background-color: #9A79FF;
+    border-radius: 50px;
+    display: block;
+    height: 16px;
+    width: 16px;
+    bottom: 0;
+    position: absolute;
+    transform: translateX(64px);
+    animation: loading_713 3.5s ease both infinite;
+}
+
+.load::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #D1C2FF;
+    border-radius: inherit;
+    animation: loading2_713 3.5s ease both infinite;
+}
+
+@keyframes text_713 {
+    0% {
+        letter-spacing: 1px;
+        transform: translateX(0px);
+    }
+
+    40% {
+        letter-spacing: 2px;
+        transform: translateX(26px);
+    }
+
+    80% {
+        letter-spacing: 1px;
+        transform: translateX(32px);
+    }
+
+    90% {
+        letter-spacing: 2px;
+        transform: translateX(0px);
+    }
+
+    100% {
+        letter-spacing: 1px;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes loading_713 {
+    0% {
+        width: 16px;
+        transform: translateX(0px);
+    }
+
+    40% {
+        width: 100%;
+        transform: translateX(0px);
+    }
+
+    80% {
+        width: 16px;
+        transform: translateX(64px);
+    }
+
+    90% {
+        width: 100%;
+        transform: translateX(0px);
+    }
+
+    100% {
+        width: 16px;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes loading2_713 {
+    0% {
+        transform: translateX(0px);
+        width: 16px;
+    }
+
+    40% {
+        transform: translateX(0%);
+        width: 80%;
+    }
+
+    80% {
+        width: 100%;
+        transform: translateX(0px);
+    }
+
+    90% {
+        width: 80%;
+        transform: translateX(15px);
+    }
+
+    100% {
+        transform: translateX(0px);
+        width: 16px;
+    }
+}
+
+/*------------Main*--------------*/
+.container {
+    background-image: url("./img/bg.png");
+    /* The image used */
+    background-color: #cccccc;
+    /* Used if the image is unavailable */
+
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 70px;
+    overflow: hidden;
+}
+
+.circle_mic {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle_mic img {
+    box-shadow: 0 0 150px 0 rgba(239, 241, 245, 0.17);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Animation for active state */
+.circle_mic.active {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 0 50px 10px rgba(255, 20, 147, 0.5); /* Pink glowing effect */
+    animation: pulse 1s infinite; /* Pulsing effect */
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 50px 10px rgba(255, 20, 147, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 70px 20px rgba(255, 20, 147, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 50px 10px rgba(255, 20, 147, 0.5);
+    }
+}
+
+.text_box{
+    position: absolute;
+    z-index: 1;
+    bottom: 150px;
+    width: 100%;
+    max-width: 856px;
+}
+.text_box p{
+    font-family: 'Fira Code';
+    font-size: 17px;
+    font-weight: 650px;
+    color: #FFFFFF;
+}
+.btn_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 26px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.btn_box div{
+    background-color: #1E1E2E;
+    width: 48px;
+    height: 48px;
+    border-radius: 3px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+.btn_box div:hover{
+    transform: scale(1.1);
+}
+.btn_box div:hover img{
+    transform: translateY(-5px);
+}
+.btn_box div:hover img{
+    transition: 0.3s;
+}
+.btn_box div:active{
+    transform: scale(1);
+}
+#ai-response::after {
+    content: '|';
+    display: inline-block;
+    animation: blink 0.6s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+.out_box{
+    position: absolute;
+    top: 20px;
+    left: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 50px 0 #9783F5;
+    background-color: #9783F5;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+.out_box:hover{
+    transform: scale(1.1);
+}
+.out_box:active{
+    transform: scale(1);
+}

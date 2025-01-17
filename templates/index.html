@@ -30,7 +30,9 @@
                 <p>Back</p>
             </div>
             <div class="big_model">
-                <div class="model_box">Using Model</div>
+                <a href="voice_page">
+                    <div class="model_box">Using Voice</div>
+                </a>
                 <img src="/static/img/select.svg" alt="">
             </div>
         </div>
@@ -150,9 +152,9 @@ Alt + Enter for suggestion (20 chars minimum)" rows="1"></textarea>
             setTimeout(function () {
                 // Ẩn preloader khi tải xong
                 preloader.classList.add('animation-status7');
-                setTimeout(function(){
+                setTimeout(function () {
                     preloader.style.display = "none";
-                },2000);
+                }, 2000);
                 // Hiển thị nội dung chính của trang
                 // Added missing class name, assuming you want to toggle a class named "hidden"
             }, 2000);

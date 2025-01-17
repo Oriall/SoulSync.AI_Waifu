@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SoulSync - Hearts and Technology</title>
+    <link rel="stylesheet" href="/static/voice_page.css">
+    <link rel="icon" type="image/x-icon" href="/static/img/moji.png">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="bg_load">
+        <div class="loader">
+            <span class="loader-text">Hi guys!!</span>
+            <span class="load"></span>
+        </div>
+    </div>
+    <div class="container">
+        <a href="home">
+            <div class="out_box">
+                <img src="/static/img/out.svg" alt="">
+            </div>
+        </a>
+        <div class="circle_mic" id="circle-mic">
+            <img src="https://i.pinimg.com/736x/44/dd/53/44dd5326d6b50ad621838367a1c79f7c.jpg" alt="">
+        </div>
+        <div class="text_box">
+            <p id="ai-response">Hi, I am Rachel, your AI girlfriend! Go ahead and talk to me. 😘</p>
+        </div>
+        <div class="btn_box">
+            <div class="btn_voice" onclick="startRecording()">
+                <img src="/static/img/mic.svg" alt="Microphone">
+            </div>
+            <div class="btn_lyric">
+                <img src="/static/img/lyric.svg" alt="Lyrics">
+            </div>
+            <div class="btn_sound">
+                <img src="/static/img/lis.svg" alt="Listen">
+            </div>
+        </div>
+    </div>
+    <script src="/static/voice_text.js"></script>
+    <script>
+        window.onload = function () {
+            var preloader = document.querySelector(".bg_load");
+
+            setTimeout(function () {
+                // Ẩn preloader khi tải xong
+                preloader.classList.add('animation-status7');
+                setTimeout(function () {
+                    preloader.style.display = "none";
+                }, 2000);
+                // Hiển thị nội dung chính của trang
+                // Added missing class name, assuming you want to toggle a class named "hidden"
+            }, 2000);
+        };
+
+    </script>
+</body>
+
+</html>

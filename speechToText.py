@@ -32,7 +32,7 @@ def convert_to_audio(text):
 
     # Cấu hình giọng nói
     voice = Voice(
-        voice_id="eVItLK1UvXctxuaRV2Oq",
+        voice_id="TC0Zp7WVFzhA8zpTlRqV",
         settings=VoiceSettings(stability=0.71, similarity_boost=0.5, style=0.0, use_speaker_boost=True),
     )
 

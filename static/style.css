@@ -313,7 +313,14 @@ body::-webkit-scrollbar {
     padding: 1px 9px;
     background-color: #604B97;
     border-radius: 5px;
+    transition: 0.2s;
 
+}
+.model_box:hover{
+    box-shadow: 0 0 50px 0 #604B97;
+}
+.model_box:active{
+    transform: scale(0.9);
 }
 
 .box2 {
