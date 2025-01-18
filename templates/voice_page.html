@@ -53,13 +53,26 @@
                 preloader.classList.add('animation-status7');
                 setTimeout(function () {
                     preloader.style.display = "none";
+                    // Tự động bật fullscreen
+                    enableFullscreen();
                 }, 2000);
-                // Hiển thị nội dung chính của trang
-                // Added missing class name, assuming you want to toggle a class named "hidden"
             }, 2000);
         };
 
+        function enableFullscreen() {
+            const elem = document.documentElement; // Tham chiếu đến phần tử toàn màn hình (toàn bộ trang)
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) { // Firefox
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) { // Chrome, Safari và Opera
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { // IE/Edge
+                elem.msRequestFullscreen();
+            }
+        }
     </script>
+
 </body>
 
 </html>
