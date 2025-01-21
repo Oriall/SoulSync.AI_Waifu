@@ -64,9 +64,14 @@ To use the ElevenLabs API features, follow these steps:
 > For more details, please visit https://ai.google.dev/gemini-api/docs/quickstart
 ## Optional: Setup system prompt
 
+<<<<<<< HEAD
    1. paste it into `.env`
 
 
+=======
+   0. paste it into `.env`
+
+>>>>>>> a45ef01a895e32fb88fa22eb6c7a7757256c9ce3
 
 ------
 >  [**SEVER DISCORD**](https://discord.gg/78TnsrJd)
