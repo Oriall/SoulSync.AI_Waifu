@@ -10,7 +10,7 @@ client = genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
 
 class AIGirlfriend:
     def __init__(self):
-        self.model = genai.GenerativeModel('gemini-1.5-pro-latest')
+        self.model = genai.GenerativeModel('gemini-2.5-flash')
         self.messages = [
             {
                 'role': 'system', 
